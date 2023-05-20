@@ -43,15 +43,19 @@ public class Main {
 //iterating with a foreach loop, to fill the array with the smaller values. On the first position is the smallest value, on the second position, the second smallest.
         for (int number:numbers){
             if(number < smallest[0]){//checking if the number smaller as the first stored number
-                smallest[1]=smallest[0];smallest[0]=number;}//if yes, writing the smallest number on the first position and the previously smallest number on the second
-            else if (number>smallest[0]&&number<smallest[1]) {smallest[1]=number;}//if the number is not the smallest, but smaller then the second smallest, writing the number as the second smallest
+                smallest[1]=smallest[0];
+                smallest[0]=number;
+            }//if yes, writing the smallest number on the first position and the previously smallest number on the second
+            else if (number>smallest[0]&&number<smallest[1]) {
+                smallest[1]=number;
+            }//if the number is not the smallest, but smaller then the second smallest, writing the number as the second smallest
         }
         return smallest;}
 
     //calculating a given Mathemtical Term in Steps without using the math-package. Using double, because decimal places possible.
     public static double calculateTerm(double x, double y) {
         double z=0; // a variable to store the result
-        z=4*y-x; //inside the brackets
+        z=(4*y)/5-x ; //inside the brackets
         z=x*x+z*z;//doubling x and the new z (n²) and adding both
         return z;}
 
